@@ -51,7 +51,7 @@ jobs:
           cd checkout
           cross build --target=${{ github.event.inputs.compilation_target }} --bin geckodriver --release
       - name: Archive release binary
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: geckodriver-linux-gnueabihf
           path: checkout/target/${{ github.event.inputs.compilation_target }}/release/geckodriver
